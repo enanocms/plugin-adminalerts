@@ -52,7 +52,7 @@ function adminalerts_setup()
       $content .= '<div class="tblholder" style="max-height: 100px; clip: rect(0px,auto,auto,0px); overflow: auto;">
                    <table border="0" cellspacing="1" cellpadding="2">';
       $class = 'row3';
-      while ( $row = $db->fetchrow() )
+      while ( $row = $db->fetchrow($q) )
       {
         $class = ( $class == 'row1' ) ? 'row3' : 'row1';
         $preview = substr($row['comment_data'], 0, 100);
